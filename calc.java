@@ -3,9 +3,16 @@ public class Main
 {
 	public static void main(String[] args) {
 	    int i = 0;
-	    String p = "s";
+	    
+	    
 	    Scanner sc = new Scanner(System.in);
 	    
+		System.out.print("login\tsenha (123)");
+		
+		System.out.print("\ndigite a senha:");
+		int senha = sc.nextInt();
+		if(senha == 123){
+
 	        while (i!=5){
 		    System.out.println("\tCalculadora\nescolha o que deseja fazer:\n(1)adição\t(2)Subtração\n(3)divisão\t(4)multiplicação\n(5)encerrar");
 	        i = sc.nextInt();
@@ -36,7 +43,11 @@ public class Main
 	        else{
 	            System.out.print("digite uma opção valida");
 	        }
-	       
-	       
-	   }}
+
+
+	   }
+	}else{
+		System.out.print("senha ou usuariso invalidos");
 	}
+	}
+}
