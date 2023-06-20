@@ -1,18 +1,19 @@
 public class Calculadora {
   
-  public int soma(int valor1, int valor2) {
+  public float soma(float valor1, float valor2) {
     return valor1 + valor2;
   }
 
-  public int subtrai(int valor1, int valor2) {
+  public float subtrai(float valor1, Float valor2) {
     return valor1 - valor2; 
   }
 
-  public int multiplica(int valor1, int valor2) {
+  public float multiplica(Float valor1, Float valor2) {
     return valor1 * valor2; 
   }
 
-  public int divide(int valor1, int valor2) {
+  public float divide(Float valor1, Float valor2) {
+    
     return valor1 / valor2; 
   }
 

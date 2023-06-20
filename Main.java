@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.print.event.PrintEvent;
+
 public class Main {
 	
 	public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class Main {
 		System.out.println("Bem-vindo a calculadora");
 		
 		int operacao = -1;
-		int resultado = 0;
+		float resultado = 0;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -29,11 +31,12 @@ public class Main {
 			}
 
 			System.out.println("Digite o primeiro valor:");
-			int valor1 = sc.nextInt();
+			Float valor1 = sc.nextFloat();
 			System.out.println("Digite o segundo valor:");
-			int valor2 = sc.nextInt();
+			Float valor2 = sc.nextFloat();
 
 			Calculadora calc = new Calculadora();
+			
 
 			switch (operacao) {
 				case 1:
@@ -43,14 +46,21 @@ public class Main {
 					resultado = calc.subtrai(valor1, valor2);
 					break;
 				case 3:
-					resultado = calc.divide(valor1, valor2);
-					break;
+					if(valor1==0 || valor2==0){
+						System.out.print("divisão impossivel de ser realizada, por favor tente novamente ");
+						resultado = 0;
+						break;
+					}else{
+						resultado = calc.divide(valor1, valor2);
+						break;
+					}
+					
 				case 4:
 					resultado = calc.multiplica(valor1, valor2);
 					break;
 			}
 
-			System.out.println(String.format("Resultado: %d", resultado));
+			System.out.println(String.format("Resultado: %f", resultado));
 
 		}
 
